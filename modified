@@ -3997,7 +3997,7 @@ AddCommand("attach", {}, "attaches you to another player", {3,1}, function(Calle
     end
 end)
 
-AddCommand("skill", {"swordkill"}, "swordkills the user auto", {1, {"player", "manual"}}, function(Caller, Args)
+AddCommand("k", {"swordkill"}, "swordkills the user auto", {1, {"player", "manual"}}, function(Caller, Args)
     local Target, Option = GetPlayer(Args[1]), Args[2] or ""
     local Backpack, Character = LocalPlayer.Backpack, GetCharacter();
     local Tool = FindFirstChild(Character, "ClassicSword") or FindFirstChild(Backpack, "ClassicSword") or FindFirstChildOfClass(Backpack, "Tool") or FindFirstChildOfClass(Character, "Tool");
